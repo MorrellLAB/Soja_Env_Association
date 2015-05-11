@@ -11,7 +11,7 @@ Contents:
     - **Soja_533x32416.clst**: Cluster file for the final dataset. ([PLINK](http://pngu.mgh.harvard.edu/~purcell/plink/) format)
     - **Soja_533x32416.map**: Physical location for each SNP in the final dataset. ([PLINK](http://pngu.mgh.harvard.edu/~purcell/plink/) format)
     - **Soja_533x32416.ped**: Genotyping matrix for the final dataset. ([PLINK](http://pngu.mgh.harvard.edu/~purcell/plink/) format)
-    - **SoySNP50K_V1-V2_Positions**: Translation table from Wm82-a1 to Wm82-a2.
+    - **SoySNP50K_V1-V2_Positions**: Translation table for SoySNP50K ([Song et al. 2013](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0054985)) from Wm82-a1 to Wm82-a2.
     - **Structure_extraparams**: Extra parameters file for [STRUCTURE](http://pritchardlab.stanford.edu/structure.html)
     - **Structure_mainparams**: Main parameters file for [STRUCTURE](http://pritchardlab.stanford.edu/structure.html)
 - Scripts/
