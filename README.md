@@ -1,4 +1,4 @@
-# Soja_Env_Association
+# Soja Environmental Association
 
 This repository contains analysis scripts and small data files used for the *Glycine soja* environmental association manuscript. Some of these data files are available in the manuscript supplement, but will also be made available here for ease of use.
 
