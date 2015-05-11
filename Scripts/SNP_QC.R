@@ -2,40 +2,34 @@
 args <- commandArgs(TRUE)
 #   Define the missing data thresholds
 #   These are porportions of markers and individuals to filter
-missing_cutoff <- 0.1
-het_cutoff <- 0.1
+missing_cutoff <<- 0.1
+het_cutoff <<- 0.1
 
 #   The missing data values
-missing_val <- 'U'
-het_val <- 'H'
+missing_val <<- "U"
+het_val <<- "H"
 
 #   This function calculates the proportion of missing data
-calc_missing <- function(x)
-{
+calc_missing <- function(x) {
     total <- length(x)
-    missing <- sum(x == missing_val)/total
-    #   we're going to be using these to keep, so if it is above the cutoff
+    missing <- sum(x == missing_val) / total
+    #   we"re going to be using these to keep, so if it is above the cutoff
     #   then we get rid of it
-    if(missing > missing_cutoff)
-    {
+    if(missing > missing_cutoff) {
         return(FALSE)
     }
-    else
-    {
+    else {
         return(TRUE)
     }
 }
 #   This function calculates the proportion of heterozygosity observed
-calc_het <- function(x)
-{
+calc_het <- function(x) {
     total <- length(x)
-    het <- sum(x == het_val)/total
-    if(het > het_cutoff)
-    {
+    het <- sum(x == het_val) / total
+    if(het > het_cutoff) {
         return(FALSE)
     }
-    else
-    {
+    else {
         return(TRUE)
     }
 }
@@ -65,11 +59,19 @@ markers.keep <- apply(cbind(markers.missing, markers.het), 1, all)
 individuals.keep
 markers.keep
 
-#   FALSE rows and columns, i.e., didn't pass QC,  will be omitted
+#   FALSE rows and columns, i.e., didn"t pass QC,  will be omitted
 snp_table <- snp_table[markers.keep, individuals.keep]
 
 #   Double check the dimensions to see that they make sense
 dim(snp_table)
 
 #   Write it out!
-write.table(snp_table, file=sub('.txt', '_QC.txt', as.character(args[1])), sep='\t', row.names=T, quote=F)
+write.table(
+    snp_table,
+    file=sub(
+        ".txt",
+        "_QC.txt",
+        as.character(args[1])),
+    sep="\t",
+    row.names=T,
+    quote=F)
