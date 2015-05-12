@@ -1,0 +1,37 @@
+---
+title: "SoySNP50K Envionrmental and Soil Association Results"
+author: "Justin Anderson"
+output: html_document
+---
+
+This script is to create manhattan plots for all of the environmental variables found in table S4.  
+
+Installing Packages
+```{r installing packsages, echo=FALSE, warning=FALSE,tidy=TRUE}
+library(qqman)
+```
+
+
+Load Supplemental Table 4 File (remove top line to leave column headers only)
+```{r,echo=FALSE}
+Final <- read.table(" <TABLE S4> ", header=TRUE)
+```
+
+Extract Coumn names for labels and plot based on chromosome position
+```{r, echo=FALSE,fig.width=10, fig.height=3}
+K=colnames(Final)
+
+#For loop below creates a manhattan plot for columns 4-87 labeled with their corresponding column header
+for(i in seq(4,87)){
+  manhattan(Final, p=K[i],main = K[i], ylab="-Log P-value", col = c("blue4", "orange3"), suggestiveline = F, genomewideline = F )
+  }
+
+# col = c("blue4", "orange3"): label alternatinv chromosomes these colors
+# suggestiveline = F : don't plot suggested line 
+# genomewideline = F : don't plot genomewide line
+# main = K[i] : title of the plot
+```
+
+
+
+
