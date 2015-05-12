@@ -26,4 +26,4 @@ Contents:
     - **Pericentromeric_FSTs.R**: Compare the distributions of pericentromeric and euchromatic per-SNP *F*<sub>ST</sub>.
     - **Plot_FST_SPA_cMMb.R**: Plot W-C *F*<sub>ST</sub>, SPA score ([Yang et al. 2012](http://www.nature.com/ng/journal/v44/n6/abs/ng.2285.html)), and cM/Mb across the genome 
     - **SNP_QC.R**: Quality control of genotyping matrix. Remove individuals and markers above a missingness threshold.
-    - **extract_bioclimatic_biophysical_data.R**: Extract bioclimatic and biophysical data from database files with a set of specified coordinates.
+    - **extract_bioclimatic_biophysical_data.R**: Extract bioclimatic and biophysical data from database files with a set of specified coordinates. Code adapted from "Species Distribution Modeling With R" by Robert J. Hijmans and Jane Elith, 2014.
