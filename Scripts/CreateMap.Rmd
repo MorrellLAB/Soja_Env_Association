@@ -1,7 +1,6 @@
 ---
 title: "Map STRUCTURE results for individuals"
 author: "Justin Anderson"
-date: "May 11, 2015"
 output: html_document
 ---
 
