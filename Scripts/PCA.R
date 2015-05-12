@@ -46,7 +46,7 @@ legend(
 
 #load data for major cluster
 major_cluster <- read.table(
-    "C:/Users/Michael/Desktop/Forever_Green_Grant/major_cluster.txt",
+    "STRUCTURE assignments file",
     header=T)
 
 #Make major cluster a factor for coloring
