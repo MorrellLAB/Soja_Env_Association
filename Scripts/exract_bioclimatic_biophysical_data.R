@@ -20,6 +20,8 @@ require(raster)
 #you can download upper, lower or mean estimates for each of these variables
 #This can be used on worldclim data as well the key is to make sure you have
 #the correct file extension. file extentions for worldclim are .bil 
+#   Code adapted from "Species Distribution Modeling With R" by 
+#   Robert J. Hijmans and Jane Elith, 2014.
 
 #directory where you placed the unziped .tif files for your region of interest
 layers_dir <- "directory where your data live"
