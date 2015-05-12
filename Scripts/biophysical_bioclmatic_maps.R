@@ -1,4 +1,5 @@
 ########Plot bioclimatic and biophysical data on maps
+#   Written by Michael B. Kantar
 
 library(raster)
 library(rgdal)
@@ -11,33 +12,42 @@ library(lattice)
 par(mfrow=c(2,2))
 
 #directory where you placed the unziped .bil files for your region of interest
-layers_dir<-"directory where you placed your worldclim data"
+layers_dir <- "directory where you placed your worldclim data"
 
 #get bioclim layers
-layers<-list.files(layers_dir,full.names=T,pattern=".bil$")
-layers<-lapply(layers,raster)
-layers<-stack(layers)
-layers_names<-list.files(layers_dir,full.names=F,pattern=".bil$")
+layers <- list.files(layers_dir, full.names=TRUE, pattern=".bil$")
+layers <- lapply(layers, raster)
+layers <- stack(layers)
+layers_names <- list.files(layers_dir, full.names=FALSE, pattern=".bil$")
 
-#If doing soils, this is the directory where you placed the unziped .tif files for your region of interest
-layers_dir<-"directory where soils data live"
+#If doing soils, this is the directory where you placed the unziped .tif files
+#for your region of interest
+layers_dir <- "directory where soils data live"
 
 #extract soil layer information
-layers<-list.files(layers_dir,full.names=T,pattern=".tif$")
-layers<-lapply(layers,raster)
-layers<-stack(layers)
-layers_names<-list.files(layers_dir,full.names=F,pattern=".tif$")
+layers <- list.files(layers_dir, full.names=TRUE, pattern=".tif$")
+layers <- lapply(layers, raster)
+layers <- stack(layers)
+layers_names <- list.files(layers_dir, full.names=FALSE, pattern=".tif$")
 
 
 #plot all biophyisical or bioclimatic variables
 plot(layers)
 
-# first layer of the RasterStack with ylim being your latitdue and xlim being your longitude
-# plot any desired layer by changing the second argument to the appropriate variable, which can be identified in layers_names
+# first layer of the RasterStack with ylim being your latitdue and xlim being
+# your longitude. plot any desired layer by changing the second argument to the
+# appropriate variable, which can be identified in layers_names.
 # Color scheme can be changed to suit your needs
-
-plot(layers, 1, ylim=c(25, 60), xlim=c(100, 150),col = rev(heat.colors(20))),
-col = rev(heat.colors(20)), main="Mean Annual Temperature", xlab="Longitude", ylab="Latitude", add=T)
+plot(
+    layers,
+    1,
+    ylim=c(25, 60),
+    xlim=c(100, 150),
+    col=rev(heat.colors(20)),
+    main="Mean Annual Temperature",
+    xlab="Longitude",
+    ylab="Latitude",
+    add=TRUE)
 
 #BIO1 = Annual Mean Temperature
 #BIO2 = Mean Diurnal Range (Mean of monthly (max temp - min temp))
@@ -58,14 +68,3 @@ col = rev(heat.colors(20)), main="Mean Annual Temperature", xlab="Longitude", yl
 #BIO17 = Precipitation of Driest Quarter
 #BIO18 = Precipitation of Warmest Quarter
 #BIO19 = Precipitation of Coldest Quarter
-
-
-
-
-
-
-
-
-
-
-
