@@ -140,19 +140,19 @@ def do_counts(nloci, alleles, miss, population_genotypes):
     #                           'PopN_ID': [200, 200, 200, ..., N_Loci]
     #                       }
     #       'PopAlleles': {
-    #                           'Pop1_ID': {
+    #                           'Pop1_ID': [
     #                                           [100, ..., N_Loci],
-    #                                           [100, ..., N_Loci',
+    #                                           [100, ..., N_Loci],
     #                                           ...
     #                                           [100, ..., N_Loci]
-    #                                      },
-    #                           'Pop2_ID': {
+    #                                      ],
+    #                           'Pop2_ID': [
     #                                           ...
-    #                                      },
+    #                                      ],
     #                           ...
-    #                           'PopN_ID': {
+    #                           'PopN_ID': [
     #                                           ...
-    #                                      }
+    #                                      ]
     #                      }
     #   }
     counts = {
