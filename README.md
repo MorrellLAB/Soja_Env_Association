@@ -6,8 +6,8 @@ This repository contains analysis scripts and small data files used for the *Gly
 
 Contents:
 - Data/
-    - **6K_Genetic_Physical_Map**: Physical and genetic map positions for the SoySNP6K, as reported in [Lee et al. 2015](http://link.springer.com/article/10.1007%2Fs11032-015-0209-5)
-    - **Pericentromeres**: Chromosome name, pericentromere start, and pericentromere end.
+    - **6K_Genetic_Physical_Map**: Physical and genetic map positions for the SoySNP6K, as reported in [Lee et al. (2015)](http://link.springer.com/article/10.1007%2Fs11032-015-0209-5)
+    - **Pericentromeres**: Chromosome name, pericentromere start, and pericentromere end. Fetched from [SoyBase (Grant et al. 2010)](http://soybase.org).
     - **Soja_533x32416.clst**: Cluster file for the final dataset. ([PLINK](http://pngu.mgh.harvard.edu/~purcell/plink/) format)
     - **Soja_533x32416.map**: Physical location for each SNP in the final dataset. ([PLINK](http://pngu.mgh.harvard.edu/~purcell/plink/) format)
     - **Soja_533x32416.ped**: Genotyping matrix for the final dataset. ([PLINK](http://pngu.mgh.harvard.edu/~purcell/plink/) format)
@@ -15,6 +15,7 @@ Contents:
     - **Structure_extraparams**: Extra parameters file for [STRUCTURE](http://pritchardlab.stanford.edu/structure.html)
     - **Structure_mainparams**: Main parameters file for [STRUCTURE](http://pritchardlab.stanford.edu/structure.html)
 - Scripts/
+    - **CreateMap.Rmd**: Plot the samples on a geographic map, colored according to STRUCTURE assignment.
     - **Folded_SFS.R**: Create a folded site frequency spectrum, separated by cluster.
     - **Genotype_Matrix_to_Fasta.py**: Create population-specific FASTA files for input into [libsequence](http://molpopgen.github.io/libsequence/) tools. Removes monomorphic markers in each population.
     - **Make_Nicholson_FST_Inputs.py**: Create input matrices for an *F*<sub>ST</sub> estimator developed by [Nicholson et al. (2002)](http://onlinelibrary.wiley.com/doi/10.1111/1467-9868.00357/abstract) from PLINK .ped and .clst files.
