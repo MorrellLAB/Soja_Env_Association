@@ -16,6 +16,7 @@ Contents:
     - **Structure_mainparams**: Main parameters file for [STRUCTURE](http://pritchardlab.stanford.edu/structure.html)
 - Scripts/
     - **CreateMap.Rmd**: Plot the samples on a geographic map, colored according to STRUCTURE assignment.
+    - **Create_Manhattanplots.rmd**:Create manhattan plots of the GWAS results for each environmental variable found in Table S4.
     - **Folded_SFS.R**: Create a folded site frequency spectrum, separated by cluster.
     - **Genotype_Matrix_to_Fasta.py**: Create population-specific FASTA files for input into [libsequence](http://molpopgen.github.io/libsequence/) tools. Removes monomorphic markers in each population.
     - **Make_Nicholson_FST_Inputs.py**: Create input matrices for an *F*<sub>ST</sub> estimator developed by [Nicholson et al. (2002)](http://onlinelibrary.wiley.com/doi/10.1111/1467-9868.00357/abstract) from PLINK .ped and .clst files.
