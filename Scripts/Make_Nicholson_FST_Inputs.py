@@ -2,7 +2,9 @@
 """A script to generate input files for the Nicholson 2002 FST estimator, as
 implemented in the R `popgen' package. This assumes PLINK input file formats.
 It acceps a .PED and a .CLST file for genotyping information and cluster
-membership. """
+membership.
+
+Written by Thomas JY Kono"""
 
 import argparse
 

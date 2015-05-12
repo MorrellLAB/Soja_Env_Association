@@ -1,3 +1,6 @@
+#   Perform the Nicholson et al. 2002 FST estimate
+#   Written by Thomas JY Kono
+
 #   Load the R package to do the estimate
 library(popgen)
 #   To do density plots

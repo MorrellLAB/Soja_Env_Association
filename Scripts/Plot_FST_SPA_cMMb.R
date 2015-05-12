@@ -2,6 +2,7 @@
 #   genome, along with SPA score and cM/Mb.
 #   This script will just plot a single chromosome, but it should easily be
 #   extended to work for the entire genome.
+#   Written by Thomas JY Kono
 
 #   load up the hierfstat library
 library(hierfstat)

@@ -1,5 +1,6 @@
 #   Script to build density plots of the per-SNP FST in pericentromeric
 #   regions and euchromatic regions.
+#   Written by Thomas JY Kono
 
 #   Read in the data with the pericentromere boundaries
 pericentromeres <<- read.table("Pericentromeres.txt", header=TRUE)

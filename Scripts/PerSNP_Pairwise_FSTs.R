@@ -1,3 +1,7 @@
+#   Calculate per-SNP FSTs for each pairwise combination of the three clusters
+#   identified through STRUCTURE.
+#   Written by Thomas JY Kono
+
 #   load up the hierfstat library
 library(hierfstat)
 

@@ -1,3 +1,7 @@
+#   Apply quality control criteria (missingness, heterozygosity) to SNP
+#   genotyping data.
+#   Written by Thomas JY Kono
+
 #   Do this so we can pass command line arguments to the script
 args <- commandArgs(TRUE)
 #   Define the missing data thresholds

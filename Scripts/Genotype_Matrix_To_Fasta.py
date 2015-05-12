@@ -4,7 +4,9 @@ FASTA files for each population. This was written with K. Thornton's
 libsequence tools in mind. This script will also remove monomorphic sites.
 
 Assumes that samples are rows and markers are columns. The first column has a
-population of origin and the second column is the individual ID."""
+population of origin and the second column is the individual ID.
+
+Written by Thomas JY Kono"""
 
 import sys
 genotype_matrix = sys.argv[1]

@@ -1,5 +1,6 @@
 #   R script to create a folded SFS for all markers on the SoySNP50K for
 #   all genotyped soja and per cluster
+#   Written by Thomas JY Kono
 
 #   A function to calculate the minor allele frequency
 #   The files are already in 0/1 format, so this should be easy!
