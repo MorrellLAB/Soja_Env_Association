@@ -19,7 +19,9 @@ Contents:
     - **Create_Manhattanplots.rmd**: Create manhattan plots of the GWAS results for each environmental variable found in Table S4.
     - **Folded_SFS.R**: Create a folded site frequency spectrum, separated by cluster.
     - **Genotype_Matrix_to_Fasta.py**: Create population-specific FASTA files for input into [libsequence](http://molpopgen.github.io/libsequence/) tools. Removes monomorphic markers in each population.
+    - **LD_Decay.R**: Calculate decay of LD over physical distance in both euchromatic and pericentromeric regions using the minimum RMSE exponential decay curve in [Abecasis et al. 2001](http://www.cell.com/ajhg/abstract/S0002-9297(07)62483-5). 
     - **Make_Nicholson_FST_Inputs.py**: Create input matrices for an *F*<sub>ST</sub> estimator developed by [Nicholson et al. (2002)](http://onlinelibrary.wiley.com/doi/10.1111/1467-9868.00357/abstract) from PLINK .ped and .clst files.
+    - **Matrix_to_Column.py** Convert from the square matrix output from [LDheatmap](http://cran.r-project.org/web/packages/LDheatmap/index.html) into a two-column format that is easy to parse for calculating an exponential least-squares curve.
     - **Nicholson_FST.R**: Actually run the Nicholson *F*<sub>ST</sub> estimator, as implemented in the R package '[popgen](http://cran.r-project.org/web/packages/popgen/index.html)'
     - **PCA.R**: Perform principle components analysis (PCA) on genetic and environmental data.
     - **Pairwise_LD.R**: Calculate pairwise LD as *D'* ([Lewontin 1964](http://www.genetics.org/content/49/1/49)) between each pair of SNPs in the dataset. Separates euchromatic and pericentromeric markers.
