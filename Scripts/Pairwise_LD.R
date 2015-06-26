@@ -82,11 +82,11 @@ pdf(file=paste(chrom, "_Pericentromere.pdf", sep=""), 8, 8)
 peri_ldh <- LDheatmap(
     peri_genotypes,
     genetic.distances=peri_distances,
-    LDmeasure="D'",
+    LDmeasure="r",
     add.map=TRUE,
     color=gray.colors(25),
     flip=TRUE,
-    title=paste("LD as D' in", chrom, "Pericentromere")
+    title=paste("LD as r-squared in", chrom, "Pericentromere")
     )
 dev.off()
 #   Open a new PDF file for the heatmap
@@ -94,11 +94,11 @@ pdf(file=paste(chrom, "_Euchromatin.pdf", sep=""), 8, 8)
 euch_ldh <- LDheatmap(
     euch_genotypes,
     genetic.distances=euch_distances,
-    LDmeasure="D'",
+    LDmeasure="r",
     add.map=TRUE,
     color=gray.colors(25),
     flip=TRUE,
-    title=paste("LD as D' in", chrom, "Euchromatin")
+    title=paste("LD as r-squared in", chrom, "Euchromatin")
     )
 dev.off()
 
