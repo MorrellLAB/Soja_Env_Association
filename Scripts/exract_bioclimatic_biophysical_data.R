@@ -35,7 +35,7 @@ raw_latlong <- read.table("Latitude and Longitude of points of interest")
 coordinates(latlong) <- c("longitude","latitude")
 
 #make your program know your latlong are spatially explicit
-latlong <- Spatiallatlong(latlong)
+latlong <- Spatialpoints(latlong)
 
 #extract soil layer information
 layers <- list.files(layers_dir, full.names=TRUE, pattern=".tif$")
